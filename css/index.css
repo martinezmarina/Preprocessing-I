@@ -1,1 +1,424 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v31/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v31/TK3_WkUHHAIjg75cFRf3bXL8LICs1xZogUE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptrg8zYS_SKggPNwIYqaqE.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 62.5%;
+}
+/* Color Scheme*/
+/* Fonts I like */
+body {
+  display: flex;
+}
+/* Font rule*/
+.sideBar {
+  width: 20%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #323639;
+}
+@media (max-width: 500px) {
+  .sideBar {
+    width: 40%;
+  }
+}
+.sideBar .accentColorBox {
+  width: 100%;
+  height: 4vh;
+  background-color: #DD4833;
+}
+.sideBar .name {
+  text-align: left;
+  transform: rotate(-90deg);
+}
+@media (max-width: 500px) {
+  .sideBar .name {
+    transform: rotate(0deg);
+    padding: 0 0 0 10%;
+  }
+}
+.sideBar h1 {
+  color: #323639;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  color: #DD4833;
+  font-size: 5rem;
+}
+@media (max-width: 500px) {
+  .sideBar h1 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .sideBar h1 {
+    font-size: 3rem;
+  }
+}
+.sideBar p {
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  color: #FDFCFC;
+}
+@media (max-width: 500px) {
+  .sideBar p {
+    font-size: 1.2rem;
+  }
+}
+.profile {
+  height: 15%;
+  margin: 10% 0;
+}
+.profile h2 {
+  margin: 0 25%;
+  text-align: center;
+  background-color: #DD4833;
+  width: 10vw;
+  height: 5vh;
+  padding: 2%;
+  color: #323639;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .profile h2 {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .profile h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .profile h2 {
+    font-size: 1.4rem;
+  }
+}
+.profile p {
+  padding: 7%;
+  text-align: left;
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  color: #FDFCFC;
+}
+@media (max-width: 500px) {
+  .profile p {
+    font-size: 1.2rem;
+  }
+}
+.contact {
+  height: 15%;
+  margin: 10% 0;
+}
+.contact h2 {
+  margin: 0 25%;
+  text-align: center;
+  background-color: #DD4833;
+  width: 10vw;
+  height: 5vh;
+  padding: 2%;
+  color: #323639;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .contact h2 {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+}
+.contact p {
+  padding: 3% 7%;
+  text-align: left;
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  color: #FDFCFC;
+}
+@media (max-width: 500px) {
+  .contact p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .contact p {
+    font-size: 1rem;
+  }
+}
+.container {
+  width: 80%;
+}
+.container h3 {
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+@media (max-width: 500px) {
+  .container h3 {
+    font-size: 1.2rem;
+  }
+}
+.container h2 {
+  color: #323639;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #DD4833;
+  width: 10vw;
+  height: 5vh;
+  padding: 2%;
+  color: #FDFCFC;
+  height: 10vh;
+  width: 18vw;
+  padding: 4%;
+}
+@media (max-width: 500px) {
+  .container h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .container h2 {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .container h2 {
+    font-size: 1.4rem;
+    height: 8vh;
+  }
+}
+.container p {
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .container p {
+    font-size: 1.2rem;
+  }
+}
+.container .education {
+  padding: 2% 8%;
+}
+.container .education div.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8%;
+}
+.container .experience {
+  padding: 4vh 8%;
+}
+.container .experience div.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8%;
+}
+.container .experience div.info .job {
+  width: 50%;
+}
+.container .references {
+  padding: 4vh 8%;
+}
+.container .references .refName {
+  display: flex;
+  justify-content: space-between;
+  padding: 8% 12%;
+}
+@media (max-width: 500px) {
+  .container .references .refName {
+    flex-direction: column;
+    padding: 8%;
+  }
+}
+.container .skills {
+  padding: 4vh 8%;
+}
+.container .skills ul {
+  padding: 5%;
+}
+.container .skills ul li {
+  line-height: 1.4;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .container .skills ul li {
+    font-size: 1.2rem;
+  }
+}
